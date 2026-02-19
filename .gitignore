@@ -90,3 +90,5 @@ http-client.private.env.json
 
 # Ignore Gradle build output directory
 build
+
+.idea
