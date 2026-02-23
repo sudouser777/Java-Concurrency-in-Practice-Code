@@ -2,7 +2,7 @@ package chapter03;
 
 public class Holder {
 
-    private int n;
+    private final int n;
 
     public Holder(int n) {
         this.n = n;

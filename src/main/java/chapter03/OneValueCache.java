@@ -9,9 +9,9 @@ import java.util.Arrays;
 @Immutable
 public class OneValueCache {
 
-    private BigInteger lastNumber;
+    private final BigInteger lastNumber;
 
-    private BigInteger[] lastFactors;
+    private final BigInteger[] lastFactors;
 
 
     public OneValueCache(BigInteger number, BigInteger[] factors) {

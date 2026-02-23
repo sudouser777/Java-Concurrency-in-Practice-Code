@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class ThreadLocalExample {
 
-    private static ThreadLocal<Connection> connectionHolder = new ThreadLocal<>() {
+    private static final ThreadLocal<Connection> connectionHolder = new ThreadLocal<>() {
 
         @Override
         protected Connection initialValue() {

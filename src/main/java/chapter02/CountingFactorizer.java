@@ -1,7 +1,6 @@
 package chapter02;
 
 
-import net.jcip.annotations.NotThreadSafe;
 import net.jcip.annotations.ThreadSafe;
 
 import java.math.BigInteger;
@@ -10,7 +9,7 @@ import java.util.concurrent.atomic.AtomicLong;
 @ThreadSafe
 public class CountingFactorizer implements Servlet {
 
-    private AtomicLong count = new AtomicLong(0);
+    private final AtomicLong count = new AtomicLong(0);
 
     public long getCount() {
         return count.get();

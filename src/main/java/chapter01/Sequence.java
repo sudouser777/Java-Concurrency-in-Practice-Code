@@ -18,12 +18,12 @@ public class Sequence {
     }
 
     static class Driver {
-        public static void main(String[] args) {
+        static void main(String[] args) {
             int nThreads = 7;
             int operationsPerThread = 1111;
 
             Sequence sequence = new Sequence();
-            try(ExecutorService executorService = Executors.newCachedThreadPool()) {
+            try (ExecutorService executorService = Executors.newCachedThreadPool()) {
                 for (int i = 0; i < nThreads; i++) {
                     executorService.submit(() -> {
                         for (int j = 0; j < operationsPerThread; j++) {

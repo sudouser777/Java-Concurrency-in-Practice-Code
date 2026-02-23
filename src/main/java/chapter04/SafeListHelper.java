@@ -1,6 +1,5 @@
 package chapter04;
 
-import net.jcip.annotations.NotThreadSafe;
 import net.jcip.annotations.ThreadSafe;
 
 import java.util.ArrayList;

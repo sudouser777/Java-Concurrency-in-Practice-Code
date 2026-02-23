@@ -2,11 +2,9 @@ package chapter02;
 
 
 import net.jcip.annotations.GuardedBy;
-import net.jcip.annotations.NotThreadSafe;
 import net.jcip.annotations.ThreadSafe;
 
 import java.math.BigInteger;
-import java.util.concurrent.atomic.AtomicReference;
 
 @ThreadSafe
 public class SynchronizedFactorizer implements Servlet {

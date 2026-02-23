@@ -9,9 +9,9 @@ import java.util.concurrent.atomic.AtomicReference;
 @NotThreadSafe
 public class UnsafeCachingFactorizer implements Servlet {
 
-    private AtomicReference<BigInteger> lastNumber = new AtomicReference<>();
+    private final AtomicReference<BigInteger> lastNumber = new AtomicReference<>();
 
-    private AtomicReference<BigInteger[]> lastFactors = new AtomicReference<>();
+    private final AtomicReference<BigInteger[]> lastFactors = new AtomicReference<>();
 
     @Override
     public void service(ServletRequest req, ServletResponse res) {

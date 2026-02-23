@@ -8,16 +8,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 @ThreadSafe
-public class MonitorVehicleTracker {
-
-    @GuardedBy("this")
-    private final Map<String, MutablePoint> locations;
+public record MonitorVehicleTracker(@GuardedBy("this") Map<String, MutablePoint> locations) {
 
     public MonitorVehicleTracker(Map<String, MutablePoint> locations) {
         this.locations = deepCopy(locations);
     }
 
-    public synchronized Map<String, MutablePoint> getLocations() {
+    @Override
+    public synchronized Map<String, MutablePoint> locations() {
         return deepCopy(locations);
     }
 
