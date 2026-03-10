@@ -11,9 +11,9 @@ repositories {
 
 dependencies {
     implementation("net.jcip:jcip-annotations:1.0")
-    testImplementation(platform("org.junit:junit-bom:6.0.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    implementation(platform("org.junit:junit-bom:6.0.0"))
+    implementation("org.junit.jupiter:junit-jupiter")
+    runtimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 tasks.test {

@@ -1,0 +1,23 @@
+package chapter11;
+
+import java.util.concurrent.BlockingQueue;
+
+public class WorkerThread extends Thread {
+
+    private final BlockingQueue<Runnable> queue;
+
+    public WorkerThread(BlockingQueue<Runnable> queue) {
+        this.queue = queue;
+    }
+
+    @Override
+    public void run() {
+        while (true) {
+            try {
+                queue.take().run();
+            } catch (InterruptedException e) {
+                break; // Allow thread to exit
+            }
+        }
+    }
+}

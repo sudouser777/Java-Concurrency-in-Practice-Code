@@ -41,4 +41,12 @@ public class ThreadDeadlock {
             return Files.readString(Paths.get(fileName));
         }
     }
+
+    static void main(String[] args) {
+        new ThreadDeadlock().run();
+    }
+
+    private void run() {
+        executorService.submit(new RenderPageTask());
+    }
 }

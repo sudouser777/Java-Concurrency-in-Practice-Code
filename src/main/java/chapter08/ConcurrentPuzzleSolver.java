@@ -22,10 +22,6 @@ public class ConcurrentPuzzleSolver<P, M> {
         this.seen = new ConcurrentHashMap<>();
     }
 
-    public ConcurrentPuzzleSolver() {
-    }
-
-
     public List<M> solve() throws InterruptedException {
         try {
             P pos = puzzle.initialPosition();
